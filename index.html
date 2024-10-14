@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Icon/cloudy.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="nav">
+          <h3><b>Weather Forecast:</b></h3>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter city name.."
+            />
+            <button
+              onclick="searchWeatherScript1(); searchWeatherScript2(); searchWeatherScript3();"
+            >
+              <i class="fa-solid fa-magnifying-glass mg_glass_dsgn"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="background_box" id="weather-inform">
+          <div class="left_background_box">
+            <!-- <img id="" src="" alt="weather-icon" width="30px" height="30px" /> -->
+            <!-- <img class="weather-icon" src="http://openweathermap.org/img/wn/04n.png" alt="Weather Icon"/> -->
+            <!-- <div class="bgbox_icon"></div> -->
+            <!-- <img class="weather-icon" id="weather-icon" alt="Weather Icon"> -->
+
+            <div class="weather-container" id="weather-container">
+              <div id="weather-info">
+                <!-- Container for weather icon -->
+
+                <div id="weather-icon-container">
+                  <img
+                    src="Icon/cloudy.png"
+                    alt=" "
+                    height="30px"
+                    width="30px"
+                  />
+                </div>
+              </div>
+            </div>
+            <p id="left_background_box_temp">25 °C</p>
+            <span id="city_name">Indore,</span>
+            <span id="country_name">India</span>
+          </div>
+
+          <div class="right_background_box">
+            <h4 id="time">5:20 PM</h4>
+            <span id="period">Evening</span>
+            <span id="day">Tuesday</span>
+          </div>
+        </div>
+
+        <div class="chartbox">
+          <div class="left_chartbox">
+            <div class="left_upbox">
+              <div class="left_upbox_first">
+                <div class="left_upbox_first_one">
+                  <div class="left_upbox_first_one_icon">
+                    <i class="fa-regular fa-droplet-percent icon_design"></i>
+                  </div>
+                  <div class="left_upbox_first_one_para">
+                    <p>Humidity</p>
+                    <p id="humidity"><b>7%</b></p>
+                  </div>
+                </div>
+                <div class="left_upbox_first_two">
+                  <div class="left_upbox_first_one_icon">
+                    <i class="fa-light fa-subtitles icon_design"></i>
+                  </div>
+                  <div class="left_upbox_first_one_para">
+                    <p>Description</p>
+                    <p id="description"><b>Cloudy</b></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="vl"></div>
+
+              <div class="left_upbox_second">
+                <div class="left_upbox_first_one">
+                  <div class="left_upbox_first_one_icon">
+                    <i class="fa-regular fa-sunrise icon_design"></i>
+                  </div>
+                  <div class="left_upbox_first_one_para">
+                    <p>Sunrise</p>
+                    <p id="sunrise"><b>6:15 AM</b></p>
+                  </div>
+                </div>
+
+                <div class="left_upbox_first_two">
+                  <div class="left_upbox_first_one_icon">
+                    <i class="fa-regular fa-sunset icon_design"></i>
+                  </div>
+                  <div class="left_upbox_first_one_para">
+                    <p>Sunset</p>
+                    <p id="sunset"><b>7:30 PM</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="left_downbox" id="weather-info">
+              <div>
+                <p class="left_downbox_main_p">Max Temp</p>
+                <p class="color_design" id="max_temp"><b>35 °C</b></p>
+              </div>
+
+              <div>
+                <p class="left_downbox_main_p">Pressure</p>
+                <p class="color_design" id="pressure"><b>1811 mb</b></p>
+              </div>
+              <div>
+                <p class="left_downbox_main_p">Min Temp</p>
+                <p class="color_design" id="min_temp"><b>18 °C</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="right_chartbox">
+            <canvas id="weatherChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>

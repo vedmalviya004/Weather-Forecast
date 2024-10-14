@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 60%;
+    height: 90%;
+    background-color: rgb(242, 242, 254);
+    border: solid 2px rgb(80, 96, 219);
+    border-radius: 23px;
+    box-shadow: 0px 26px 63px -29px rgb(153, 162, 236);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav {
+    width: 91%;
+    height: 6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav h3 {
+    color: rgb(80, 96, 219);
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    height: 80%;
+    padding-right: 10px;
+}
+
+.input-wrapper input {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding-left: 10px;
+    border: 1px solid rgb(196, 198, 199);
+    font-weight: 300;
+}
+
+.input-wrapper button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+
+.input-wrapper button:hover {
+    transform: scale(1.1);
+}
+
+.mg_glass_dsgn {
+    color: rgb(168, 169, 170);
+}
+
+.background_box {
+    height: 40%;
+    width: 91%;
+    background-image: url("Bg-Color/Evening.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 13px;
+    transition: background-image 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 13px;
+    color: white;
+}
+
+.background_box span {
+    font-size: 16px;
+}
+
+.weather-icon {
+    height: 30px;
+    width: 30px;
+}
+
+#left_background_box_temp {
+    font-size: 80px;
+}
+
+.right_background_box h4 {
+    text-align: end;
+}
+
+.chartbox {
+    height: 40%;
+    width: 91%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_chartbox {
+    height: 100%;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.left_upbox {
+    background-color: white;
+    border-radius: 13px;
+    width: 100%;
+    height: 63%;
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_upbox_first {
+    height: 100%;
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.left_upbox_first_one {
+    display: flex;
+}
+
+.left_upbox_first_two {
+    display: flex;
+}
+
+.left_upbox_first_one_para p {
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+.vl {
+    border-left: 1px solid rgb(214, 214, 214);
+    height: 90%;
+    margin-top: 5px;
+}
+
+.left_upbox_second {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.icon_design {
+    color: #687bf5;
+    font-size: 26px;
+}
+
+.left_downbox {
+    background: linear-gradient(90deg, rgba(156, 154, 194, 1) 0%, rgba(154, 168, 244, 1) 0%, rgba(104, 123, 245, 1) 80%);
+    border-radius: 13px;
+    width: 100%;
+    height: 26%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: -18px 18px 32px -13px rgb(153, 162, 236);
+}
+
+.left_downbox_main_p {
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.color_design {
+    color: rgba(0, 224, 86, 0.902);
+    font-size: 14px;
+}
+
+.right_chartbox {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 58%;
+    border-radius: 13px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .box {
+        width: 80%;
+    }
+
+    #left_background_box_temp {
+        font-size: 60px;
+    }
+
+    .background_box span {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
+
+    .input-wrapper {
+        width: 60%;
+    }
+
+    #left_background_box_temp {
+        font-size: 50px;
+    }
+
+    .background_box span {
+        font-size: 12px;
+    }
+
+    .weather-icon {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-wrapper {
+        width: 80%;
+    }
+
+    .background_box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #left_background_box_temp {
+        font-size: 40px;
+    }
+
+    .background_box span {
+        font-size: 10px;
+    }
+
+    .weather-icon {
+        height: 15px;
+        width: 15px;
+    }
+
+    .left_chartbox, .right_chartbox {
+        width: 100%;
+        height: auto;
+    }
+
+    .chartbox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_upbox, .left_downbox {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .left_downbox_main_p {
+        font-size: 12px;
+    }
+}
